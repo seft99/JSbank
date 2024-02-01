@@ -1,13 +1,50 @@
+
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@use '@angular/material' as mat;
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat.core();
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+$JSbank-Proyect-primary: mat.define-palette(mat.$indigo-palette);
+$JSbank-Proyect-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
+
+// The warn palette is optional (defaults to red).
+$JSbank-Proyect-warn: mat.define-palette(mat.$red-palette);
+
+// Create the theme object. A theme consists of configurations for individual
+// theming systems such as "color" or "typography".
+$JSbank-Proyect-theme: mat.define-light-theme((
+  color: (
+    primary: $JSbank-Proyect-primary,
+    accent: $JSbank-Proyect-accent,
+    warn: $JSbank-Proyect-warn,
+  )
+));
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include mat.all-component-themes($JSbank-Proyect-theme);
+
 body {
     background-color: black;
     margin: 0;  /* Esto elimina los márgenes predeterminados del cuerpo */
     padding: 0; /* Esto elimina los rellenos predeterminados del cuerpo */
   }
-  
+
   *{
-    font-family: Arial, sans-serif;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
 }
   :root{
     --black-color : #000000;
     --white-color : #FFFFFF
   }
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

@@ -6,6 +6,8 @@ import { AppComponent } from './app.component';
 import { MainTollbalComponent } from './components/main-tollbal/main-tollbal.component';
 import { MainPageComponent } from './components/main-page/main-page.component';
 import { CarouselComponent } from './components/carousel/carousel.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MaterialImportsModule } from './shared/material-imports/material-imports.module';
 
 @NgModule({
   declarations: [
@@ -13,10 +15,13 @@ import { CarouselComponent } from './components/carousel/carousel.component';
     MainTollbalComponent,
     MainPageComponent,
     CarouselComponent
+    
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    MaterialImportsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

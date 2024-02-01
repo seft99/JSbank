@@ -12,9 +12,12 @@
     </div>
 
     <button *ngIf="controls" class="btn-carousel btn-prev">
-        <i class="fas fa-arrow-circle-left icon-carousel icon-prev" (click)="onPrevClick()"></i>
+        <mat-icon class=" icon-carousel icon-prev" (click)="onPrevClick()">arrow_back_ios</mat-icon>
     </button>
     <button *ngIf="controls" class="btn-carousel btn-next">
-        <i class="fas fa-arrow-circle-left icon-carousel icon-next" (click)="onNextClick()"></i>
+        <mat-icon class=" icon-carousel icon-next" (click)="onNextClick()">arrow_forward_ios</mat-icon>
     </button>
+
+
+
 </div>
