@@ -1,1 +1,13 @@
-/* You can add global styles to this file, and also import other style files */
+body {
+    background-color: black;
+    margin: 0;  /* Esto elimina los márgenes predeterminados del cuerpo */
+    padding: 0; /* Esto elimina los rellenos predeterminados del cuerpo */
+  }
+  
+  *{
+    font-family: Arial, sans-serif;
+}
+  :root{
+    --black-color : #000000;
+    --white-color : #FFFFFF
+  }
